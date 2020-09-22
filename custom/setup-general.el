@@ -12,6 +12,7 @@
 
 (use-package sr-speedbar
   :init
+  (setq speedbar-show-unknown-files t)
   (setq sr-speedbar-skip-other-window-p t))
 
 (load-theme 'deeper-blue)
