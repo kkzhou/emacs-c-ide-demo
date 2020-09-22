@@ -1,6 +1,20 @@
 (menu-bar-mode -1)
 (tool-bar-mode -1)
+(when (eq system-type 'darwin)
+  (setq mac-option-key-is-meta nil
+        mac-command-key-is-meta t
+        mac-command-modifier 'meta
+        mac-option-modifier 'none))
 
+(use-package maxframe
+  :init
+  (add-hook 'window-setup-hook 'maximize-frame t))
+
+(use-package sr-speedbar
+  :init
+  (setq sr-speedbar-skip-other-window-p t))
+
+(load-theme 'deeper-blue)
 (setq gc-cons-threshold 100000000)
 (setq inhibit-startup-message t)
 
